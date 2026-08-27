@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HENRY Automotive | Premium Made Possible</title>
+  <meta name="description" content="HENRY is a modern automotive startup focused on premium design, advanced technology, strong safety, reliability, and honest pricing." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#06070a',
+              surface: '#0c0f17',
+              slate: '#161b26',
+              cyan: '#38bdf8',
+              blue: '#0284c7',
+              electric: '#0066ff',
+              silver: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#06070a] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION BAR (STICKY FROSTED GLASS)                                     -->
+  <!-- ========================================================================= -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo & Emblem -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 transition-transform group-hover:scale-110 flex items-center justify-center">
+            <img src="assets/logo.svg" alt="HENRY Emblem" class="w-full h-full object-contain filter drop-shadow-[0_0_12px_rgba(56,189,248,0.5)]" />
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-black tracking-widest text-white font-heading">HENRY</span>
+            <span class="text-[9px] font-mono tracking-widest text-cyan-400 uppercase -mt-1">Automotive</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#models" class="hover:text-cyan-400 transition-colors">Models</a>
+          <a href="#configurator" class="hover:text-cyan-400 transition-colors">Build</a>
+          <a href="#technology" class="hover:text-cyan-400 transition-colors">Technology</a>
+          <a href="#safety" class="hover:text-cyan-400 transition-colors">Safety</a>
+          <a href="#value" class="hover:text-cyan-400 transition-colors">Value</a>
+          <a href="#reviews" class="hover:text-cyan-400 transition-colors">Reviews</a>
+          <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+          <a href="#test-drive" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Primary CTA & Mobile Hamburger -->
+        <div class="flex items-center gap-4">
+          <a href="#configurator" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_20px_rgba(2,132,199,0.4)] transition-all duration-300 transform hover:-translate-y-0.5">
+            <span>Build Your HENRY</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden px-4 pt-3 pb-6 bg-[#07090ecf] backdrop-blur-2xl border-b border-slate-800 space-y-3 mt-3">
+      <a href="#models" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Models</a>
+      <a href="#configurator" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Build Your HENRY</a>
+      <a href="#technology" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Technology</a>
+      <a href="#safety" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Safety</a>
+      <a href="#value" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Value</a>
+      <a href="#reviews" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Reviews</a>
+      <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">About HENRY</a>
+      <a href="#test-drive" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400">Book Test Drive</a>
+      <div class="pt-2">
+        <a href="#configurator" class="w-full text-center block py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-blue-600">
+          Build Your HENRY
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION: CINEMATIC SHOWCASE                                          -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col justify-between items-center overflow-hidden">
+    
+    <!-- Background Atmospheric Lighting & Particle Grid -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="hero-beam-glow absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/15 blur-[140px] rounded-full transition-opacity duration-1000"></div>
+      <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-cyan-500/10 blur-[130px] rounded-full"></div>
+      <div class="absolute bottom-10 right-1/4 w-[500px] h-[300px] bg-blue-900/15 blur-[140px] rounded-full"></div>
+      <!-- Subtle Grid Floor -->
+      <div class="absolute bottom-0 inset-x-0 h-64 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_100%,#000_70%,transparent_100%)] opacity-70"></div>
+    </div>
+
+    <!-- Hero Titles & Brand Typography -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center space-y-5">
+      
+      <!-- Startup Status Pill -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/60 backdrop-blur-xl shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span class="text-xs font-mono font-semibold tracking-wider text-slate-300">THE NEW BENCHMARK IN AUTOMOTIVE</span>
+      </div>
+
+      <!-- Main Giant Brand Headline -->
+      <div class="space-y-2">
+        <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-metallic-chrome font-heading uppercase">
+          HENRY
+        </h1>
+        <p class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-metallic-blue tracking-tight font-heading">
+          Premium Made Possible
+        </p>
+      </div>
+
+      <!-- Subtitle Quote -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-slate-300 font-light leading-relaxed">
+        "Premium design. Intelligent technology. Honest pricing."
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="#models" class="px-8 py-3.5 rounded-full text-sm font-bold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-500/50 backdrop-blur-md transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2">
+          <i class="fa-solid fa-compass text-cyan-400"></i>
+          <span>Explore Models</span>
+        </a>
+        <a href="#configurator" class="px-8 py-3.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_25px_rgba(2,132,199,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+          <span>Build Your HENRY</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Cinematic Hero Vehicle Display with Interactive Headlights -->
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-4 mt-8 md:mt-12 flex flex-col items-center">
+      
+      <!-- Headlight Beam Ray Effect Overlays -->
+      <div id="hero-headlight-rays" class="absolute -top-12 inset-x-0 h-44 pointer-events-none opacity-100 transition-opacity duration-700 flex justify-between px-16 sm:px-32 max-w-4xl mx-auto">
+        <div class="w-48 h-full bg-gradient-to-tr from-cyan-400/25 via-blue-500/10 to-transparent blur-2xl transform -rotate-12"></div>
+        <div class="w-48 h-full bg-gradient-to-tl from-cyan-400/25 via-blue-500/10 to-transparent blur-2xl transform rotate-12"></div>
+      </div>
+
+      <!-- Large Hero Cinematic Render Container -->
+      <div class="relative w-full aspect-[21/9] max-h-[440px] flex items-center justify-center">
+        
+        <!-- Ambient Shadow & Glow -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-black/90 blur-2xl rounded-full"></div>
+        <div class="hero-beam-glow absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-cyan-500/20 blur-xl rounded-full"></div>
+
+        <!-- Master Futuristic Car Silhouette Graphic -->
+        <div class="w-full h-full flex items-center justify-center filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] animate-float">
+          <svg viewBox="0 0 1000 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full max-w-5xl">
+            <defs>
+              <linearGradient id="heroBodyPaint" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#334155" />
+                <stop offset="35%" stop-color="#0f172a" />
+                <stop offset="70%" stop-color="#090d16" />
+                <stop offset="100%" stop-color="#020617" />
+              </linearGradient>
+              <linearGradient id="heroGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+                <stop offset="50%" stop-color="#0f172a" stop-opacity="0.8" />
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+              </linearGradient>
+              <linearGradient id="heroNeonLed" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="40%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#0284c7" />
+              </linearGradient>
+            </defs>
+
+            <!-- Ground Contact Shadow -->
+            <ellipse cx="500" cy="370" rx="420" ry="22" fill="#000000" opacity="0.9" filter="blur(10px)" />
+
+            <!-- Front Grille & Wheels -->
+            <g transform="translate(180, 260)">
+              <ellipse cx="50" cy="80" rx="38" ry="48" fill="#090d16" stroke="#475569" stroke-width="4" />
+              <circle cx="50" cy="80" r="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+            </g>
+            <g transform="translate(720, 260)">
+              <ellipse cx="50" cy="80" rx="38" ry="48" fill="#090d16" stroke="#475569" stroke-width="4" />
+              <circle cx="50" cy="80" r="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+            </g>
+
+            <!-- Main Chassis Flow Lines -->
+            <path d="M 160 300 C 140 240, 200 190, 300 170 C 400 150, 600 150, 700 170 C 800 190, 860 240, 840 300 C 820 340, 780 355, 500 355 C 220 355, 180 340, 160 300 Z" fill="url(#heroBodyPaint)" stroke="#475569" stroke-width="2" />
+
+            <!-- Aerodynamic Hood Curves -->
+            <path d="M 300 170 Q 500 145 700 170" stroke="#ffffff" stroke-width="2" stroke-opacity="0.4" fill="none" />
+            <path d="M 340 185 Q 500 165 660 185" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" fill="none" />
+
+            <!-- Fastback Windshield & Cabin Glass -->
+            <path d="M 310 165 C 360 85, 420 70, 500 70 C 580 70, 640 85, 690 165 C 620 155, 560 150, 500 150 C 440 150, 380 155, 310 165 Z" fill="url(#heroGlass)" stroke="#334155" stroke-width="2" />
+
+            <!-- Aerodynamic Horizon Light Strip (Continuous LED Lightbar) -->
+            <path d="M 200 240 Q 500 252 800 240" stroke="url(#heroNeonLed)" stroke-width="4" stroke-linecap="round" filter="drop-shadow(0 0 10px #38bdf8)" />
+
+            <!-- Quad Matrix LED Headlamps -->
+            <g filter="drop-shadow(0 0 12px #38bdf8)">
+              <circle cx="230" cy="242" r="6" fill="#ffffff" />
+              <circle cx="255" cy="243" r="5" fill="#38bdf8" />
+              <circle cx="280" cy="245" r="4" fill="#38bdf8" />
+
+              <circle cx="770" cy="242" r="6" fill="#ffffff" />
+              <circle cx="745" cy="243" r="5" fill="#38bdf8" />
+              <circle cx="720" cy="245" r="4" fill="#38bdf8" />
+            </g>
+
+            <!-- Center Illuminated Bespoke Emblem -->
+            <g transform="translate(482, 260) scale(0.15)">
+              <polygon points="120,12 216,64 216,176 120,228 24,176 24,64" fill="#0f172a" stroke="#cbd5e1" stroke-width="6" />
+              <path d="M68 62 L88 52 L88 188 L68 178 Z" fill="#ffffff" />
+              <path d="M152 52 L172 62 L172 178 L152 188 Z" fill="#ffffff" />
+              <path d="M88 112 L152 112 L162 128 L78 128 Z" fill="#38bdf8" />
+            </g>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Quick Interactive Headlight Toggle Controls -->
+      <div class="mt-4 flex items-center gap-3">
+        <button id="hero-lights-toggle" class="px-4 py-2 rounded-full text-xs font-semibold text-amber-300 bg-amber-500/10 border border-amber-400/40 backdrop-blur-md shadow-lg transition-all flex items-center gap-2 hover:scale-105">
+          <i class="fa-solid fa-lightbulb text-amber-300"></i>
+          <span>Lights: ON</span>
+        </button>
+        <span class="text-xs text-slate-400 font-mono hidden sm:inline">Interactive Lighting Studio Mode</span>
+      </div>
+
+    </div>
+
+    <!-- Quick Brand Stats Ticker -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 mt-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-3xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl">
+        <div class="text-center p-3">
+          <div class="text-xl md:text-2xl font-black text-white font-mono">₹9.99 Lakh</div>
+          <div class="text-xs text-slate-400 mt-0.5">Starting Honest Price</div>
+        </div>
+        <div class="text-center p-3 border-l border-slate-800">
+          <div class="text-xl md:text-2xl font-black text-cyan-400 font-mono">520 km</div>
+          <div class="text-xs text-slate-400 mt-0.5">Max Electric Range</div>
+        </div>
+        <div class="text-center p-3 border-l md:border-l border-slate-800">
+          <div class="text-xl md:text-2xl font-black text-white font-mono">5-Star</div>
+          <div class="text-xs text-slate-400 mt-0.5">Global Safety Cage</div>
+        </div>
+        <div class="text-center p-3 border-l border-slate-800">
+          <div class="text-xl md:text-2xl font-black text-cyan-400 font-mono">4.9s</div>
+          <div class="text-xs text-slate-400 mt-0.5">0-100 km/h Acceleration</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: VEHICLE MODELS LINEUP                                            -->
+  <!-- ========================================================================= -->
+  <section id="models" class="relative py-24 md:py-32 border-t border-slate-800/60 bg-[#07090e]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-car"></i> THE HENRY FLEET
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          Engineered for Distinction
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg">
+          Explore our lineup of next-generation luxury vehicles. Sedan elegance, SUV command, or pure electric power.
+        </p>
+      </div>
+
+      <!-- Models Cards Grid -->
+      <div id="models-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: INTERACTIVE CAR CONFIGURATOR ("BUILD YOUR HENRY")                -->
+  <!-- ========================================================================= -->
+  <section id="configurator" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-gradient-to-b from-[#06070a] via-[#090d16] to-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-sliders"></i> INTERACTIVE 3D STUDIO
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+            Build Your HENRY
+          </h2>
+          <p class="text-slate-400 text-sm md:text-base mt-2">
+            Customize exterior paint, wheel styles, bespoke interior trims, powertrain, and ADAS packages in real-time.
+          </p>
+        </div>
+
+        <!-- Model Selection Tabs -->
+        <div class="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-950/80 border border-slate-800 backdrop-blur-xl">
+          <button data-model="A1" class="cfg-model-tab px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/30 transition-all">
+            HENRY A1 (Sedan)
+          </button>
+          <button data-model="X1" class="cfg-model-tab px-4 py-2.5 rounded-xl font-medium text-xs md:text-sm text-slate-400 bg-slate-900/60 hover:text-white hover:bg-slate-800/80 border border-slate-800 transition-all">
+            HENRY X1 (SUV)
+          </button>
+          <button data-model="E1" class="cfg-model-tab px-4 py-2.5 rounded-xl font-medium text-xs md:text-sm text-slate-400 bg-slate-900/60 hover:text-white hover:bg-slate-800/80 border border-slate-800 transition-all">
+            HENRY E1 (EV)
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Configurator Studio Grid (Visualizer + Controls) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Interactive Visualizer Canvas (7 Cols) -->
+        <div class="lg:col-span-7 sticky top-24 space-y-4">
+          <div id="configurator-visualizer" class="w-full">
+            <!-- Visualizer rendered here via visualizer.js -->
+          </div>
+
+          <!-- Quick Interactive Tip -->
+          <div class="flex items-center justify-between text-xs text-slate-500 font-mono px-2">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrows-spin text-cyan-400"></i> Switch Camera Angle Above</span>
+            <span>Real-time Dynamic Shader V3.2</span>
+          </div>
+        </div>
+
+        <!-- Right: Customization Controls & Live Pricing Engine (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 backdrop-blur-2xl shadow-2xl space-y-6">
+            
+            <!-- Step 1: Exterior Paint Finishes -->
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">1. Exterior Finish</span>
+                <span class="text-xs text-cyan-400 font-mono">Metallic & Pearl</span>
+              </div>
+              <div id="cfg-color-options" class="grid grid-cols-5 gap-2">
+                <!-- Color swatches dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Step 2: Wheels & Rims -->
+            <div class="pt-4 border-t border-slate-800/80">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">2. Wheel Design</span>
+                <span class="text-xs text-cyan-400 font-mono">Forged Alloys</span>
+              </div>
+              <div id="cfg-wheel-options" class="space-y-2">
+                <!-- Wheels dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Step 3: Interior Leather Theme -->
+            <div class="pt-4 border-t border-slate-800/80">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">3. Interior & Upholstery</span>
+                <span class="text-xs text-cyan-400 font-mono">Nappa & Eco</span>
+              </div>
+              <div id="cfg-interior-options" class="space-y-2">
+                <!-- Interiors dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Step 4: Powertrain & Performance -->
+            <div class="pt-4 border-t border-slate-800/80">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">4. Powertrain & Battery</span>
+                <span class="text-xs text-cyan-400 font-mono">Drivetrain</span>
+              </div>
+              <div id="cfg-powertrain-options" class="space-y-2">
+                <!-- Powertrains dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Step 5: Optional Technology Packages -->
+            <div class="pt-4 border-t border-slate-800/80">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">5. Optional Packages</span>
+                <span class="text-xs text-cyan-400 font-mono">SmartDrive & Audio</span>
+              </div>
+              <div id="cfg-package-options" class="space-y-2">
+                <!-- Packages dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Live Dynamic Pricing Footer -->
+            <div class="pt-6 border-t border-slate-800 space-y-4">
+              
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+                <div>
+                  <div id="cfg-summary-model" class="text-xs font-mono text-cyan-400 uppercase">YOUR HENRY A1</div>
+                  <div class="text-xs text-slate-400 mt-0.5">Estimated Ex-Showroom</div>
+                </div>
+                <div class="text-right">
+                  <div id="cfg-total-price" class="text-2xl md:text-3xl font-black text-white font-mono tracking-tight">₹9.99 Lakh</div>
+                  <div class="text-[11px] text-slate-400">EMI from <span id="cfg-emi-estimate" class="text-cyan-400 font-mono font-bold">₹15,400/mo</span></div>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="cfg-btn-quote" class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 transition-all flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-file-invoice text-cyan-400"></i>
+                  <span>Request a Quote</span>
+                </button>
+                <button id="cfg-btn-testdrive" class="w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
+                  <span>Book with Spec</span>
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: TECHNOLOGY SUITE                                                 -->
+  <!-- ========================================================================= -->
+  <section id="technology" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-microchip"></i> INTELLIGENT INNOVATION
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          Technology Built Around You
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg">
+          Experience our four foundational pillars of next-generation automotive engineering.
+        </p>
+      </div>
+
+      <!-- Technology Switcher Tabs -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-12">
+        <button data-tech="smartdrive" class="tech-tab-btn active p-3.5 rounded-2xl border border-blue-500 bg-blue-600/30 text-white text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-compass text-cyan-400"></i> SmartDrive
+        </button>
+        <button data-tech="connect" class="tech-tab-btn p-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-wifi text-cyan-400"></i> Connect
+        </button>
+        <button data-tech="smartsense" class="tech-tab-btn p-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-shield-halved text-cyan-400"></i> SmartSense
+        </button>
+        <button data-tech="powercore" class="tech-tab-btn p-3.5 rounded-2xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white text-xs md:text-sm font-bold transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-bolt text-cyan-400"></i> PowerCore
+        </button>
+      </div>
+
+      <!-- Feature Deep Dive Box -->
+      <div id="tech-feature-content" class="p-8 md:p-12 rounded-3xl bg-slate-950/80 border border-slate-800 shadow-2xl backdrop-blur-xl">
+        <!-- Injected dynamically via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: SAFETY ("SAFETY COMES STANDARD")                                 -->
+  <!-- ========================================================================= -->
+  <section id="safety" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-gradient-to-b from-[#06070a] via-[#080c14] to-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-shield-halved"></i> UNCOMPROMISED PROTECTION
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          Safety Comes Standard
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg">
+          At HENRY, safety is not an expensive optional add-on. Every safety innovation comes standard across all trims.
+        </p>
+      </div>
+
+      <!-- Safety Features 8-Grid -->
+      <div id="safety-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Interactive Safety Chassis Radar Visualization Callout -->
+      <div class="p-8 md:p-12 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="space-y-4 max-w-xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-mono">
+            <i class="fa-solid fa-circle-check"></i> 5-STAR GLOBAL SAFETY CELL
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-white">Ultra-High Strength Boron Steel Monocoque</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Constructed with over 78% hot-stamped boron and high-strength steels, providing unmatched torsional rigidity and passenger cabin impact dissipation in all crash scenarios.
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-400 pt-2">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-cyan-400"></i> Front Crumple Zone</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-cyan-400"></i> Side Impact Beams</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-cyan-400"></i> Battery Armor Shield</span>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-96 p-6 rounded-2xl bg-slate-950 border border-slate-800 text-center space-y-4">
+          <div class="text-4xl font-black text-cyan-400 font-mono">360°</div>
+          <div class="text-sm font-bold text-white">Full-Surround Active Collision Shield</div>
+          <p class="text-xs text-slate-400">Continuous 10-millisecond active radar & ultrasonic sweeps keeping you safe 24/7.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: PRICE & VALUE ("MORE CAR. LESS COMPROMISE.")                    -->
+  <!-- ========================================================================= -->
+  <section id="value" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-tag"></i> TRANSPARENT VALUE PROPOSITION
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          More Car. Less Compromise.
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg">
+          Why pay double for traditional automotive brand markups? HENRY delivers luxury grade design and honest pricing directly to you.
+        </p>
+      </div>
+
+      <!-- Value Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-cyan-400 text-xl">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Direct-to-Consumer Pricing</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            By eliminating unnecessary middleman markups and traditional dealership bloat, we pass up to 40% in direct savings to you without cutting corners on build quality.
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-600/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Ultra-Low Ownership Costs</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Predictable maintenance packages, 5-Year / 100,000 km standard warranty, and high thermal efficiency powertrains that keep your long-term running costs minimal.
+          </p>
+        </div>
+
+        <div class="p-6 md:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-cyan-400 text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">5-Year Peace of Mind</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every HENRY vehicle comes backed by 24/7 nationwide roadside assistance, 8-Year battery warranty on EV models, and free over-the-air software updates forever.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: CUSTOMER REVIEWS & TESTIMONIALS                                  -->
+  <!-- ========================================================================= -->
+  <section id="reviews" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-gradient-to-b from-[#06070a] via-[#090d16] to-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-star"></i> VERIFIED DRIVER EXPERIENCES
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          Loved by Early Owners
+        </h2>
+        <p class="text-slate-400 text-base md:text-lg">
+          See what our verified drivers say about their journey with HENRY.
+        </p>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: ABOUT HENRY                                                      -->
+  <!-- ========================================================================= -->
+  <section id="about" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-[#06070a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Text Story -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+            <i class="fa-solid fa-flag"></i> OUR MISSION & VISION
+          </div>
+          
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+            Built for the Next Generation
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            HENRY was created with one simple idea: <span class="text-white font-semibold">premium automotive design should be accessible to more people.</span> We combine intelligent engineering, modern technology, safety, and sophisticated design to create cars people are proud to own.
+          </p>
+
+          <p class="text-sm text-slate-400 leading-relaxed">
+            From our cutting-edge robotic assembly facilities to our cloud-connected software stack, every detail of a HENRY vehicle is purposefully engineered for durability, zero compromise on luxury aesthetics, and extraordinary value.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+            <div>
+              <div class="text-3xl font-black text-white font-mono">100%</div>
+              <div class="text-xs text-slate-400 mt-1">Renewable Energy Powered Plants</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-cyan-400 font-mono">5-Year</div>
+              <div class="text-xs text-slate-400 mt-1">Standard Comprehensive Warranty</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Emblem & Showcase Visual -->
+        <div class="lg:col-span-6 flex items-center justify-center">
+          <div class="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-br from-slate-900 to-[#04060a] border border-slate-800 p-8 flex flex-col items-center justify-center text-center shadow-2xl overflow-hidden group">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.15)_0%,transparent_70%)]"></div>
+            
+            <div class="w-32 h-32 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+              <img src="assets/logo.svg" alt="HENRY Original Emblem" class="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(56,189,248,0.6)]" />
+            </div>
+
+            <h3 class="text-2xl font-black text-white font-heading">HENRY</h3>
+            <p class="text-xs font-mono text-cyan-400 mt-1">PREMIUM MADE POSSIBLE</p>
+            <p class="text-xs text-slate-400 mt-4 max-w-xs leading-relaxed">
+              Designed with precision. Crafted for life. Ready for tomorrow.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION: BOOK A TEST DRIVE                                                -->
+  <!-- ========================================================================= -->
+  <section id="test-drive" class="relative py-24 md:py-32 border-t border-slate-800/80 bg-gradient-to-b from-[#06070a] via-[#080d16] to-[#04060a]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center space-y-4 mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
+          <i class="fa-solid fa-key"></i> EXPERIENCE THE DRIVE
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white font-heading">
+          Book a Test Drive
+        </h2>
+        <p class="text-slate-400 text-base">
+          Experience HENRY's whisper-quiet cabin, intelligent ADAS, and exhilarating torque firsthand at your nearest showroom or doorstep.
+        </p>
+      </div>
+
+      <!-- Test Drive Booking Glass Form -->
+      <div class="p-8 md:p-12 rounded-3xl bg-slate-950/80 border border-slate-800 backdrop-blur-2xl shadow-2xl">
+        <form id="test-drive-form" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Your Name *</label>
+              <input type="text" id="td-name" required placeholder="e.g. Arun Kumar" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Email Address *</label>
+              <input type="email" id="td-email" required placeholder="e.g. arun@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Phone Number *</label>
+              <input type="tel" id="td-phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">City *</label>
+              <select id="td-city-select" required class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Vehicle of Choice *</label>
+              <select id="td-vehicle-select" required class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors">
+                <option value="A1">HENRY A1 (Executive Sedan - Starting ₹9.99 Lakh)</option>
+                <option value="X1">HENRY X1 (Premium SUV - Starting ₹14.99 Lakh)</option>
+                <option value="E1">HENRY E1 (Pure Electric SUV - Starting ₹16.99 Lakh)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Preferred Date *</label>
+              <input type="date" id="td-date" required class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none transition-colors" />
+            </div>
+          </div>
+
+          <!-- Submit CTA Button -->
+          <div class="pt-4">
+            <button type="submit" class="w-full py-4 rounded-xl font-extrabold text-sm uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-xl shadow-blue-500/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-car"></i>
+              <span>Book My Test Drive</span>
+            </button>
+            <p class="text-center text-[11px] text-slate-500 mt-3 font-mono">
+              <i class="fa-solid fa-lock text-cyan-400"></i> No obligations. Doorstep or showroom test drive available across all major cities.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="relative bg-[#030407] border-t border-slate-800 text-slate-400 text-xs pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Column -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.svg" alt="HENRY Logo" class="w-8 h-8 object-contain" />
+            <span class="text-2xl font-black tracking-widest text-white font-heading">HENRY</span>
+          </div>
+          <p class="text-cyan-400 font-mono text-xs font-semibold">Premium Made Possible</p>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            HENRY is a modern automotive company focused on premium design, advanced technology, uncompromising safety, and honest transparent pricing.
+          </p>
+
+          <!-- Newsletter Form -->
+          <div class="pt-2">
+            <span class="text-xs font-mono text-slate-300 block mb-2 font-bold uppercase">Stay Connected</span>
+            <form id="newsletter-form" class="flex gap-2 max-w-sm">
+              <input type="email" required placeholder="Enter your email" class="px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs flex-1 focus:outline-none focus:border-cyan-400" />
+              <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Quick Links: Models -->
+        <div class="space-y-3">
+          <h4 class="text-white font-mono uppercase tracking-wider text-xs font-bold">Models</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#models" class="hover:text-cyan-400 transition-colors">HENRY A1 Sedan</a></li>
+            <li><a href="#models" class="hover:text-cyan-400 transition-colors">HENRY X1 SUV</a></li>
+            <li><a href="#models" class="hover:text-cyan-400 transition-colors">HENRY E1 Electric</a></li>
+            <li><a href="#configurator" class="hover:text-cyan-400 transition-colors">Build Your HENRY</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links: Technology & Safety -->
+        <div class="space-y-3">
+          <h4 class="text-white font-mono uppercase tracking-wider text-xs font-bold">Innovation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#technology" class="hover:text-cyan-400 transition-colors">HENRY SmartDrive ADAS</a></li>
+            <li><a href="#technology" class="hover:text-cyan-400 transition-colors">HENRY Connect Cloud</a></li>
+            <li><a href="#technology" class="hover:text-cyan-400 transition-colors">HENRY SmartSense</a></li>
+            <li><a href="#safety" class="hover:text-cyan-400 transition-colors">Safety Architecture</a></li>
+            <li><a href="#value" class="hover:text-cyan-400 transition-colors">Honest Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links: Company & Legal -->
+        <div class="space-y-3">
+          <h4 class="text-white font-mono uppercase tracking-wider text-xs font-bold">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-cyan-400 transition-colors">About HENRY</a></li>
+            <li><a href="#reviews" class="hover:text-cyan-400 transition-colors">Owner Reviews</a></li>
+            <li><a href="#test-drive" class="hover:text-cyan-400 transition-colors">Book a Test Drive</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Social Icons & Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div class="text-slate-500">
+          © 2026 HENRY Automotive Technologies. All rights reserved. "HENRY" and "Premium Made Possible" are registered trademarks.
+        </div>
+
+        <div class="flex items-center gap-4 text-slate-400 text-sm">
+          <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODALS CONTAINER                                                          -->
+  <!-- ========================================================================= -->
+  
+  <!-- 1. Full Technical Specs Modal -->
+  <div id="specs-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div id="specs-modal-body" class="relative w-full max-w-2xl rounded-3xl bg-[#090d16] border border-slate-800 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- 2. Official Quote Request Modal -->
+  <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div id="quote-modal-body" class="relative w-full max-w-lg rounded-3xl bg-[#090d16] border border-slate-800 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- 3. Test Drive Booking Success Modal -->
+  <div id="td-success-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div id="td-success-body" class="relative w-full max-w-md rounded-3xl bg-[#090d16] border border-slate-800 shadow-2xl">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container (Fixed) -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ========================================================================= -->
+  <!-- SCRIPTS                                                                   -->
+  <!-- ========================================================================= -->
+  <script src="js/config.js"></script>
+  <script src="js/visualizer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
